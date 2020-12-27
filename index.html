@@ -3,6 +3,9 @@
 
 <head>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r79/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
@@ -25,7 +28,7 @@
 
 <body id="page-top">
 
-  <!-- Navigation -->
+  <!-- Menu -->
   <a class="menu-toggle rounded" href="#">
     <i class="fas fa-bars"></i>
   </a>
@@ -35,7 +38,7 @@
         <a class="js-scroll-trigger">Menu</a>
       </li>
       <li class="sidebar-nav-item">
-        <a class="js-scroll-trigger" href="#page-top">Home</a>
+        <a class="js-scroll-trigger" id="home" href="#page-top">Home</a>
       </li>
       <li class="sidebar-nav-item">
         <a class="js-scroll-trigger" href="#informations">Informations</a>
@@ -55,6 +58,9 @@
     </ul>
   </nav>
 
+  <!-- Welcome animation -->
+  <canvas id="reveal-effect"></canvas>
+
   <!-- Header -->
   <header class="masthead d-flex">
     <div class="container text-center my-auto">
@@ -67,14 +73,14 @@
     <div class="overlay"></div>
   </header>
 
-  <!-- About -->
+  <!-- Informations -->
   <section class="content-section bg-light" id="informations">
     <div class="container text-center">
       <div class="row">
         <div class="col-lg-10 mx-auto">
-          <h2>Welcome to my website</h2>
-          <p class="lead mb-5">Here you can see my whole CV and projects</p>
-          <a class="btn btn-dark btn-xl js-scroll-trigger" href="#services">What We Offer</a>
+          <h2>Informations</h2>
+          <p class="lead mb-5">adress / phone number / mail etc</p>
+          <a class="btn btn-dark btn-xl js-scroll-trigger" href="#services">random link idk</a>
         </div>
       </div>
     </div>
@@ -84,8 +90,8 @@
   <section class="content-section bg-primary text-white text-center" id="skills">
     <div class="container">
       <div class="content-section-heading">
-        <h3 class="text-secondary mb-0">Services</h3>
-        <h2 class="mb-5">What We Offer</h2>
+        <h3 class="text-secondary mb-0">Skills</h3>
+        <h2 class="mb-5">What I can offer</h2>
       </div>
       <div class="row">
         <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
@@ -93,50 +99,46 @@
             <i class="icon-screen-smartphone"></i>
           </span>
           <h4>
-            <strong>Responsive</strong>
+            <strong>Software developement</strong>
           </h4>
-          <p class="text-faded mb-0">Looks great on any screen size!</p>
+          <p class="text-faded mb-0">Lots of languages used in my projects.</p>
         </div>
         <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
           <span class="service-icon rounded-circle mx-auto mb-3">
             <i class="icon-pencil"></i>
           </span>
           <h4>
-            <strong>Redesigned</strong>
+            <strong>Artificial Intelligence</strong>
           </h4>
-          <p class="text-faded mb-0">Freshly redesigned for Bootstrap 4.</p>
+          <p class="text-faded mb-0">Game theory algorithms, genetic algorithms, neural networks...</p>
         </div>
         <div class="col-lg-3 col-md-6 mb-5 mb-md-0">
           <span class="service-icon rounded-circle mx-auto mb-3">
             <i class="icon-like"></i>
           </span>
           <h4>
-            <strong>Favorited</strong>
+            <strong>Side skills</strong>
           </h4>
-          <p class="text-faded mb-0">Millions of users
-            <i class="fas fa-heart"></i>
-            Start Bootstrap!</p>
+          <p class="text-faded mb-0">Video editing, music editing, game developement...</p>
         </div>
         <div class="col-lg-3 col-md-6">
           <span class="service-icon rounded-circle mx-auto mb-3">
             <i class="icon-mustache"></i>
           </span>
           <h4>
-            <strong>Question</strong>
+            <strong>Science</strong>
           </h4>
-          <p class="text-faded mb-0">I mustache you a question...</p>
+          <p class="text-faded mb-0">Mathematics, Physics...</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Callout -->
+  <!-- Experience -->
   <section class="callout" id="experience">
     <div class="container text-center">
-      <h2 class="mx-auto mb-5">Welcome to
-        <em>your</em>
-        next website!</h2>
-      <a class="btn btn-primary btn-xl" href="https://startbootstrap.com/theme/stylish-portfolio/">Download Now!</a>
+      <h2 class="mx-auto mb-5">Experience</h2>
+      <a class="btn btn-primary btn-xl" href="https://startbootstrap.com/theme/stylish-portfolio/">Random link idk</a>
     </div>
   </section>
 
@@ -145,15 +147,15 @@
     <div class="container">
       <div class="content-section-heading text-center">
         <h3 class="text-secondary mb-0">Portfolio</h3>
-        <h2 class="mb-5">Recent Projects</h2>
+        <h2 class="mb-5">Main Projects</h2>
       </div>
       <div class="row no-gutters">
         <div class="col-lg-6">
           <a class="portfolio-item" href="#!">
             <div class="caption">
               <div class="caption-content">
-                <div class="h2">Stationary</div>
-                <p class="mb-0">A yellow pencil with envelopes on a clean, blue backdrop!</p>
+                <div class="h2">Smart Cars</div>
+                <p class="mb-0">Implementation of a simple genetic algorithm using P5.js library</p>
               </div>
             </div>
             <img class="img-fluid" src="img/portfolio-1.jpg" alt="">
@@ -163,8 +165,8 @@
           <a class="portfolio-item" href="#!">
             <div class="caption">
               <div class="caption-content">
-                <div class="h2">Ice Cream</div>
-                <p class="mb-0">A dark blue background with a colored pencil, a clip, and a tiny ice cream cone!</p>
+                <div class="h2">Neural network from scratch</div>
+                <p class="mb-0">A whole library implementing a multiple layer neural network using only python and numpy</p>
               </div>
             </div>
             <img class="img-fluid" src="img/portfolio-2.jpg" alt="">
@@ -174,8 +176,8 @@
           <a class="portfolio-item" href="#!">
             <div class="caption">
               <div class="caption-content">
-                <div class="h2">Strawberries</div>
-                <p class="mb-0">Strawberries are such a tasty snack, especially with a little sugar on top!</p>
+                <div class="h2">Architect application</div>
+                <p class="mb-0">A library implementing several algorithms such as BFS, dijkstra, A*...</p>
               </div>
             </div>
             <img class="img-fluid" src="img/portfolio-3.jpg" alt="">
@@ -185,8 +187,8 @@
           <a class="portfolio-item" href="#!">
             <div class="caption">
               <div class="caption-content">
-                <div class="h2">Workspace</div>
-                <p class="mb-0">A yellow workspace with some scissors, pencils, and other objects.</p>
+                <div class="h2">Ricochet Robot game</div>
+                <p class="mb-0">Implementation of a game with GUI and solver using A* and DFS algorithm.</p>
               </div>
             </div>
             <img class="img-fluid" src="img/portfolio-4.jpg" alt="">
@@ -201,17 +203,17 @@
     <div class="container">
       <ul class="list-inline mb-5">
         <li class="list-inline-item">
-          <a class="social-link rounded-circle text-white mr-3" href="#!">
+          <a class="social-link rounded-circle text-white mr-3" href="https://www.facebook.com/enzo.durand.37/" a target=”_blank”>
             <i class="icon-social-facebook"></i>
           </a>
         </li>
         <li class="list-inline-item">
-          <a class="social-link rounded-circle text-white mr-3" href="#!">
-            <i class="icon-social-twitter"></i>
+          <a class="social-link rounded-circle text-white mr-3" href="https://fr.quora.com/profile/Hanzo?ch=10&share=519cf10b&srid=YhyTm" a target=”_blank”>
+            <i class="icon-social-quora"></i>
           </a>
         </li>
         <li class="list-inline-item">
-          <a class="social-link rounded-circle text-white" href="#!">
+          <a class="social-link rounded-circle text-white" href="https://github.com/hanzopgp" a target=”_blank”>
             <i class="icon-social-github"></i>
           </a>
         </li>
@@ -234,6 +236,7 @@
 
   <!-- Custom scripts for this template -->
   <script src="js/stylish-portfolio.min.js"></script>
+  <script src="js/welcome-animation.js"></script>
 
 </body>
 

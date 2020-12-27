@@ -14,6 +14,32 @@ body {
   font-family: 'Source Sans Pro';
 }
 
+#page-top {
+  visibility: hidden;
+}
+
+body.loaded #page {
+  visibility: visible;
+}
+
+body.loaded #reveal-effect {
+  opacity: 1;
+}
+
+body.revealed #reveal-effect {
+  display: none;
+}
+
+#reveal-effect {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  /* transition: all 5s; */
+}
+
 .btn-xl {
   padding: 1.25rem 2.5rem;
 }
