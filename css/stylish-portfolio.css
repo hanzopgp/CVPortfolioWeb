@@ -36,6 +36,14 @@ body {
   padding: 1.25rem 2.5rem;
 }
 
+#btn-home {
+  padding : 0.6rem 2gitrem;
+  background-color: #def0de !important;
+  color:rgb(0, 0, 0) !important;
+  position: relative;
+  bottom : 40px;
+}
+
 .content-section {
   padding-top: 7.5rem;
   padding-bottom: 7.5rem;
