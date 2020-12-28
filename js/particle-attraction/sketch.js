@@ -15,12 +15,13 @@ var responsiveOffSetTxtAlt;
 var offsets = [];
 var offsetsAlt = [];
 var paddingLeft;
+var pointActivated = true;
 
 function setup(){	
 	canvas = createCanvas(windowWidth-20	, windowHeight);
-	
+
 	rangeX = int(windowWidth/5);
-	responsiveFontSize = int(windowWidth/150);
+	responsiveFontSize = int(windowWidth/120);
 	responsiveFontSizeAlt = int(windowWidth/300);
 	responsiveOffSetTxt = int(windowWidth/96);
 	responsiveOffSetTxtAlt = int(windowWidth/128);
@@ -28,9 +29,16 @@ function setup(){
 	for(var i = 1; i < 6; i++){
 		offsets.push(paddingLeft+responsiveOffSetTxt*i);
 	}
-	for(var i = 1; i < 4; i++){
+	for(var i = 1; i < 5; i++){
 		offsetsAlt.push(offsets[4]+responsiveOffSetTxtAlt*i);
 	}
+
+	button = createButton('Switch mode');
+    button.position(paddingLeft, offsetsAlt[3]);
+	button.mousePressed(switchMode);
+	button.style('background-color:black');
+	button.style('border:2px solid #def0de');
+	button.style('color:white');
 
 	//rangeX = windowHeight/2;
 	canvas.position(0,0);
@@ -42,8 +50,11 @@ function setup(){
 }
 
 function draw(){
-	background(0);
-	drawTxt();
+	if(pointActivated){
+		background(0);
+		drawTxt();
+	}
+	
 	for(var i = 0; i < nbParticles; i++){
 		for(var j = 0; j < attractors.length; j++){
 			particles[i].attractedBy(attractors[j]);
@@ -66,8 +77,21 @@ function draw(){
 	}
 }
 
+function switchMode() {
+	if(pointActivated == true){
+		pointActivated = false;
+	}else{
+		pointActivated = true;
+	}
+  }
+
+function windowResized() {
+	resizeCanvas(windowWidth, windowHeight);
+}
+
 function drawTxt(){
 	push();
+	stroke(0);
 	strokeWeight(0);
 	fill("#def0de");
 	textSize(responsiveFontSize);
@@ -101,11 +125,10 @@ function mousePressed(){
 }
 
 function keyPressed(){
-	bool = false;
 	if(key == "b"){
 		bool = true;
 	}
-	if(key == "n"){
+	if(key == "v"){
 		bool = false;
 	}
 	if(key == "p"){
