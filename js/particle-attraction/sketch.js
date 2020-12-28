@@ -19,9 +19,11 @@ var paddingLeft;
 var pointActivated = true;
 var moreInfosActivated = false;
 var frames = [];
+var G;
 
 function setup(){	
 	if(displayWidth > 800){ //computer
+		G = 0.5;
 		canvas = createCanvas(windowWidth-20	, windowHeight);
 		nbParticles = 2000;
 		rangeX = int(windowWidth/5);
@@ -69,6 +71,7 @@ function setup(){
 			button3.style('font-family:Andale Mono');
 		}	
 	}else{ //phone
+		G = 0.1;
 		canvas = createCanvas(displayWidth, displayHeight);
 		nbParticles = 300;
 		rangeX = int(displayWidth/5);

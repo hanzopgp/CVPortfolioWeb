@@ -26,7 +26,6 @@ function Particle(x,y){
 		var force = p5.Vector.sub(attractorPos, this.pos);
 		var dsquared = force.magSq();
 		dsquared = constrain(dsquared, 100, 500);
-		var G = 0.3;
 		var strength = (this.w + attractor.w)*G / dsquared;
 		force.setMag(strength);
 		this.acc.add(force);
@@ -36,8 +35,8 @@ function Particle(x,y){
 		var repulsorPos = createVector(repulsor.pos.x, repulsor.pos.y);
 		var force = p5.Vector.sub(repulsorPos, this.pos);
 		var dsquared = force.magSq();
-		var G = 2;
-		var strength = (this.w + repulsor.w)*G / dsquared;
+		var G2 = 2;
+		var strength = (this.w + repulsor.w)*G2 / dsquared;
 		force.setMag(-strength);
 		this.acc.add(force);
 	}
