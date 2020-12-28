@@ -1,7 +1,7 @@
 var particles = [];
 var attractors = [];
 var repulsors = [];
-var nbParticles = 500;
+var nbParticles = 1000;
 var bool = true;
 var tmp = 0;
 var frameCount;
@@ -39,6 +39,7 @@ function setup(){
 	button.style('background-color:black');
 	button.style('border:2px solid #def0de');
 	button.style('color:white');
+	button.style('font-size:'+responsiveFontSize+'px');
 
 	//rangeX = displayHeight/2;
 	canvas.position(0,0);
@@ -60,7 +61,7 @@ function draw(){
 			particles[i].attractedBy(attractors[j]);
 		}
 		particles[i].show();
-		if(frameCount >= 150){
+		if(frameCount >= 300){
 			for(var k = 0; k < repulsors.length; k++){
 				particles[i].repulsedBy(repulsors[k]);
 			}
