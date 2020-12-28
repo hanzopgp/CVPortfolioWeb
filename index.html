@@ -15,16 +15,13 @@
     #content{
       display: none;
     }
-    #loading{
-      visibility: visible;
-    }
-    
 </style>
 <script>
     function showSite()
     {
+      setTimeout(function(){
         document.getElementById("content").style.display = "block";
-        document.getElementById("loading").style.visibility = "hidden";
+      }, 1000);
     }
 </script>
 
