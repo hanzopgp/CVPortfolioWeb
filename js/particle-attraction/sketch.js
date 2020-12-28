@@ -35,7 +35,7 @@ function setup(){
 		for(var i = 1; i < 7; i++){
 			offsets.push(paddingLeft+responsiveOffSetTxt*i);
 		}
-		for(var i = 1; i < 7; i++){
+		for(var i = 1; i < 8; i++){
 			offsetsAlt.push(offsets[5]+responsiveOffSetTxtAlt*i);
 		}
 		for(var i = 0; i < nbParticles; i++){
@@ -69,10 +69,19 @@ function setup(){
 			button3.style('color:#def0de');
 			button3.style('font-size:'+responsiveFontSize-7+'px');
 			button3.style('font-family:Andale Mono');
+
+			button4 = createButton('Reset');
+			button4.position(paddingLeft, offsetsAlt[6]+3*(windowWidth/65));
+			button4.mousePressed(resetCanvas);
+			button4.style('background-color:black');
+			button4.style('border:1px solid #def0de');
+			button4.style('color:#def0de');
+			button4.style('font-size:'+responsiveFontSize-7+'px');
+			button4.style('font-family:Andale Mono');
 		}	
 	}else{ //phone
 		G = 0.2;
-		canvas = createCanvas(displayWidth, displayHeight);
+		canvas = createCanvas(displayWidth-20, displayHeight);
 		nbParticles = 300;
 		rangeX = int(displayWidth/5);
 		responsiveFontSize = int(displayWidth/120);
@@ -165,6 +174,15 @@ function addParticle(){
 		for(var i = 0; i < 500; i++){
 			particles.push(new Particle(random(rangeX, windowWidth - rangeX), random(rangeY, windowHeight - rangeY)));
 		}
+	}
+}
+
+function resetCanvas(){
+	attractors = [];
+	repulsors = [];
+	particles = [];
+	for(var i = 0; i < nbParticles; i++){
+		particles.push(new Particle(random(rangeX, windowWidth - rangeX), random(rangeY, windowHeight - rangeY)));
 	}
 }
 

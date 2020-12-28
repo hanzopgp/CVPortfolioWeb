@@ -4,8 +4,8 @@ const TMath = THREE.Math;
 
 let conf = {
   color: 0xadeed7,
-  objectWidth: 30,
-  objectThickness: 3,
+  objectWidth: 20,
+  objectThickness: 4,
   ambientColor: 0x808080,
   light1Color: 0x59ff88,
   shadow: false,
@@ -82,7 +82,7 @@ function startAnim() {
   });
   setTimeout(() => {
     document.body.classList.add('revealed');
-  }, 4500);
+  }, 3500);
 }
 
 function animate() {

@@ -26,16 +26,16 @@ body {
 
 #name-title{
   font-family: 'Metro';
-  font-size: 60px;
+  font-size: 4vw;
   color: #def0de;
   line-height: 70%;
 }
 
-.mb-5{
+#under-title {
   color : #def0de;
   position : relative;
   bottom: 0px;
-  font-size: 19px;
+  font-size: 1vw;
   font-family: 'Michroma';
 }
 
@@ -44,7 +44,7 @@ body {
 }
 
 #btn-home {
-  padding : 0.5rem 1.5rem;
+  padding : 0.3vw 0.7vw;
   background-color: #def0de !important;
   color:rgb(0, 0, 0) !important;
   position: relative;
@@ -58,6 +58,31 @@ body {
   background-color: rgb(0, 0, 0) !important;
   color:#def0de !important;
   border-color: #def0de !important;
+}
+
+#informations {
+  background-color: #adeed7 !important;
+  color :rgb(0, 0, 0) !important;
+}
+
+#skills {
+  background-color: rgb(0, 0, 0) !important;
+  color : #adeed7 !important;
+}
+
+#experience {
+  background-color: #d9e7b0 !important;
+  color :rgb(0, 0, 0) !important;
+}
+
+#portfolio {
+  background-color: rgb(0, 0, 0) !important;
+  color :#d9e7b0 !important;
+}
+
+#contact {
+  background-color: #d9e7b0 !important;
+  color :rgb(0, 0, 0) !important;
 }
 
 .content-section {
@@ -358,7 +383,7 @@ footer.footer .social-link {
   width: 4rem;
   line-height: 4.3rem;
   font-size: 1.5rem;
-  background-color: #1D809F;
+  background-color: rgb(0, 0, 0);
   transition: background-color 0.15s ease-in-out;
   box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
 }
@@ -377,9 +402,9 @@ a:hover, a:focus, a:active {
 }
 
 .btn-primary {
-  background-color: #1D809F !important;
-  border-color: #1D809F !important;
-  color: #fff !important;
+  background-color: rgb(0, 0, 0) !important;
+  border-color: #d9e7b0 !important;
+  color: #d9e7b0 !important;
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
@@ -388,9 +413,9 @@ a:hover, a:focus, a:active {
 }
 
 .btn-secondary {
-  background-color: #ecb807 !important;
-  border-color: #ecb807 !important;
-  color: #fff !important;
+  background-color: rgb(0, 0, 0) !important;
+  border-color: #d9e7b0 !important;
+  color: #d9e7b0 !important;
 }
 
 .btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active {
@@ -416,5 +441,9 @@ a:hover, a:focus, a:active {
 }
 
 .text-secondary {
-  color: #ecb807 !important;
+  color: white !important;
+}
+
+#Copyright {
+  color : rgb(0, 0, 0) !important;
 }
