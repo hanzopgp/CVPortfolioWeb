@@ -59,7 +59,6 @@ function setup(){
 			button3.style('font-size:'+responsiveFontSize-7+'px');
 			button3.style('font-family:Andale Mono')
 		}	
-
 	}else{ //phone
 		canvas = createCanvas(displayWidth-20	, displayHeight);
 		nbParticles = 300;
@@ -108,14 +107,16 @@ function draw(){
 		}
 	}
 
-	if(frameCount <= 300){
-		for(var i = 0; i < frames.length - 1; i++){
-			if(frameCount > (150+frames[i])){
-				for(var j = i*(nbParticles/40); j < (i+1)*(nbParticles/40); j++){
-					if(j >= nbParticles){
-						break;
+	if(windowWidth > 800){
+		if(frameCount <= 300){
+			for(var i = 0; i < frames.length - 1; i++){
+				if(frameCount > (150+frames[i])){
+					for(var j = i*(nbParticles/40); j < (i+1)*(nbParticles/40); j++){
+						if(j >= nbParticles){
+							break;
+						}
+						particles[j].show();
 					}
-					particles[j].show();
 				}
 			}
 		}
