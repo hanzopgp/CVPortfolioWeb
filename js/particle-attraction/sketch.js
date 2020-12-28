@@ -101,7 +101,9 @@ function setup(){
 function draw(){
 	if(pointActivated){
 		background(0);
-		drawTxt();
+		if(displayWidth > 800){
+			drawTxt();
+		}
 		if(moreInfosActivated){
 			showMoreInfos();
 		}
@@ -145,18 +147,6 @@ function draw(){
 	for(var j = 0; j < repulsors.length; j++){
 		repulsors[j].show();
 	}
-}
-
-function sleep(milliseconds) 
-{
-  	var start = new Date().getTime();
- 	for (var i = 0; i < 1e7; i++) 
- 	{
-    	if ((new Date().getTime() - start) > milliseconds)
-    	{
-      		break;
-    	}
-  	}
 }
 
 function switchMode() {
