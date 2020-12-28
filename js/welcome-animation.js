@@ -3,11 +3,11 @@ let width, height, cx, cy, wWidth, wHeight;
 const TMath = THREE.Math;
 
 let conf = {
-  color: 0x000000,
+  color: 0xdef0de,
   objectWidth: 8,
   objectThickness: 3,
   ambientColor: 0x808080,
-  light1Color: 0xffffff,
+  light1Color: 0x59ff88,
   shadow: false,
   perspective: 75,
   cameraZ: 75,
