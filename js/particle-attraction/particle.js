@@ -10,7 +10,7 @@ function Particle(x,y){
 
 	this.show = function(){
 		//stroke(this.color1,this.color2,this.color3);
-		stroke(255,255,255, 200);
+		stroke('def0de');
 		strokeWeight(1);
 		point(this.pos.x,this.pos.y);
 	}
