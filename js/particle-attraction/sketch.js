@@ -20,17 +20,34 @@ var pointActivated = true;
 function setup(){	
 	canvas = createCanvas(displayWidth-20	, displayHeight);
 
-	rangeX = int(displayWidth/5);
-	responsiveFontSize = int(displayWidth/120);
-	responsiveFontSizeAlt = int(displayWidth/300);
-	responsiveOffSetTxt = int(displayWidth/96);
-	responsiveOffSetTxtAlt = int(displayWidth/128);
-	paddingLeft = int(displayWidth/24);
-	for(var i = 1; i < 6; i++){
-		offsets.push(paddingLeft+responsiveOffSetTxt*i);
-	}
-	for(var i = 1; i < 5; i++){
-		offsetsAlt.push(offsets[4]+responsiveOffSetTxtAlt*i);
+	if(displayWidth > 800){
+		rangeX = int(windowWidth/5);
+		responsiveFontSize = int(windowWidth/120);
+		responsiveFontSizeAlt = int(windowWidth/300);
+		responsiveOffSetTxt = int(windowWidth/96);
+		responsiveOffSetTxtAlt = int(windowWidth/128);
+		console.log(windowWidth);
+		paddingLeft = int(windowWidth/24);
+		for(var i = 1; i < 6; i++){
+			offsets.push(paddingLeft+responsiveOffSetTxt*i);
+		}
+		for(var i = 1; i < 5; i++){
+			offsetsAlt.push(offsets[4]+responsiveOffSetTxtAlt*i);
+		}
+	}else{
+		rangeX = int(displayWidth/5);
+		responsiveFontSize = int(displayWidth/120);
+		responsiveFontSizeAlt = int(displayWidth/300);
+		responsiveOffSetTxt = int(displayWidth/96);
+		responsiveOffSetTxtAlt = int(displayWidth/128);
+		console.log(displayWidth);
+		paddingLeft = int(displayWidth/24);
+		for(var i = 1; i < 6; i++){
+			offsets.push(paddingLeft+responsiveOffSetTxt*i);
+		}
+		for(var i = 1; i < 5; i++){
+			offsetsAlt.push(offsets[4]+responsiveOffSetTxtAlt*i);
+		}
 	}
 
 	button = createButton('Switch mode');
@@ -61,7 +78,7 @@ function draw(){
 			particles[i].attractedBy(attractors[j]);
 		}
 		particles[i].show();
-		if(frameCount >= 300){
+		if(frameCount >= 150){
 			for(var k = 0; k < repulsors.length; k++){
 				particles[i].repulsedBy(repulsors[k]);
 			}
