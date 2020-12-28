@@ -107,7 +107,7 @@ function draw(){
 		}
 	}
 
-	if(windowWidth > 800){
+	if(displayWidth > 800){
 		if(frameCount <= 300){
 			for(var i = 0; i < frames.length - 1; i++){
 				if(frameCount > (150+frames[i])){
