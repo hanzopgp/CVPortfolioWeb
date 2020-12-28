@@ -76,9 +76,9 @@ h6 {
   height: 30rem;
 }
 
-@media (max-width: 992px) {
+@media (max-width: auto) {
   .map {
-    height: 75%;
+    height: 100%;
   }
 }
 
