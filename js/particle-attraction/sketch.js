@@ -41,6 +41,15 @@ function setup(){
 		}
 
 		if(windowWidth > 800){
+			button = createButton('Switch mode');
+			button.position(paddingLeft, offsetsAlt[3]);
+			button.mousePressed(switchMode);
+			button.style('background-color:black');
+			button.style('border:1px solid #def0de');
+			button.style('color:#def0de');
+			button.style('font-size:'+responsiveFontSize-7+'px');
+			button.style('font-family:Andale Mono');
+
 			button2 = createButton('Add particles');
 			button2.position(paddingLeft, offsetsAlt[4]+windowWidth/65);
 			button2.mousePressed(addParticle);
@@ -48,7 +57,7 @@ function setup(){
 			button2.style('border:1px solid #def0de');
 			button2.style('color:#def0de');
 			button2.style('font-size:'+responsiveFontSize-7+'px');
-			button2.style('font-family:Andale Mono')
+			button2.style('font-family:Andale Mono');
 
 			button3 = createButton('Display infos');
 			button3.position(paddingLeft, offsetsAlt[5]+2*(windowWidth/65));
@@ -57,7 +66,7 @@ function setup(){
 			button3.style('border:1px solid #def0de');
 			button3.style('color:#def0de');
 			button3.style('font-size:'+responsiveFontSize-7+'px');
-			button3.style('font-family:Andale Mono')
+			button3.style('font-family:Andale Mono');
 		}	
 	}else{ //phone
 		canvas = createCanvas(displayWidth-20	, displayHeight);
@@ -79,15 +88,6 @@ function setup(){
 		}
 	}
 
-	button = createButton('Switch mode');
-    button.position(paddingLeft, offsetsAlt[3]);
-	button.mousePressed(switchMode);
-	button.style('background-color:black');
-	button.style('border:1px solid #def0de');
-	button.style('color:#def0de');
-	button.style('font-size:'+responsiveFontSize-7+'px');
-	button.style('font-family:Andale Mono')
-
 	//rangeX = displayHeight/2;
 	canvas.position(0,0);
 	canvas.style('z-index', '-1');
@@ -103,9 +103,9 @@ function draw(){
 		background(0);
 		if(displayWidth > 800){
 			drawTxt();
-		}
-		if(moreInfosActivated){
-			showMoreInfos();
+			if(moreInfosActivated){
+				showMoreInfos();
+			}
 		}
 	}
 
@@ -199,7 +199,7 @@ function showMoreInfos(){
 }
 
 function windowResized() {
-	resizeCanvas(displayWidth, displayHeight);
+	resizeCanvas(windowWidth, windowHeight);
 }
 
 function drawTxt(){
