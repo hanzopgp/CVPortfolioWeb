@@ -120,6 +120,10 @@ function draw(){
 				}
 			}
 		}
+	}else{
+		for(var i = 0; i < particles.length; i++){
+			particles[i].show();
+		}
 	}
 	
 	for(var i = 0; i < particles.length; i++){
