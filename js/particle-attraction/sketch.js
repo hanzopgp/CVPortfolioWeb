@@ -69,7 +69,7 @@ function setup(){
 			button3.style('font-family:Andale Mono');
 		}	
 	}else{ //phone
-		canvas = createCanvas(displayWidth-20	, displayHeight);
+		canvas = createCanvas(displayWidth, displayHeight);
 		nbParticles = 300;
 		rangeX = int(displayWidth/5);
 		responsiveFontSize = int(displayWidth/120);
