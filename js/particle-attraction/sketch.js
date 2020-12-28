@@ -18,11 +18,12 @@ var offsetsAlt = [];
 var paddingLeft;
 var pointActivated = true;
 var moreInfosActivated = false;
+var frames = [];
 
 function setup(){	
 	if(displayWidth > 800){ //computer
 		canvas = createCanvas(windowWidth-20	, windowHeight);
-		nbParticles = 500;
+		nbParticles = 2000;
 		rangeX = int(windowWidth/5);
 		responsiveFontSize = int(windowWidth/120);
 		responsiveFontSizeAlt = int(windowWidth/205);
@@ -61,7 +62,7 @@ function setup(){
 
 	}else{ //phone
 		canvas = createCanvas(displayWidth-20	, displayHeight);
-		nbParticles = 200;
+		nbParticles = 300;
 		rangeX = int(displayWidth/5);
 		responsiveFontSize = int(displayWidth/120);
 		responsiveFontSizeAlt = int(displayWidth/300);
@@ -92,6 +93,10 @@ function setup(){
 	canvas.position(0,0);
 	canvas.style('z-index', '-1');
 	background(0); //lines
+
+	for(var i = 0; i < 150; i++){
+		frames.push(i*5);
+	}
 }
 
 function draw(){
@@ -102,17 +107,29 @@ function draw(){
 			showMoreInfos();
 		}
 	}
+
+	if(frameCount <= 300){
+		for(var i = 0; i < frames.length - 1; i++){
+			if(frameCount > (150+frames[i])){
+				for(var j = i*(nbParticles/40); j < (i+1)*(nbParticles/40); j++){
+					if(j >= nbParticles){
+						break;
+					}
+					particles[j].show();
+				}
+			}
+		}
+	}
 	
 	for(var i = 0; i < particles.length; i++){
 		for(var j = 0; j < attractors.length; j++){
 			particles[i].attractedBy(attractors[j]);
 		}
-		particles[i].show();
-		if(frameCount >= 150){
+		if(frameCount >= 300){
 			for(var k = 0; k < repulsors.length; k++){
 				particles[i].repulsedBy(repulsors[k]);
 			}
-			particles[i].update();
+			particles[i].update()	;
 			particles[i].show();
 		}
 		
@@ -123,6 +140,18 @@ function draw(){
 	for(var j = 0; j < repulsors.length; j++){
 		repulsors[j].show();
 	}
+}
+
+function sleep(milliseconds) 
+{
+  	var start = new Date().getTime();
+ 	for (var i = 0; i < 1e7; i++) 
+ 	{
+    	if ((new Date().getTime() - start) > milliseconds)
+    	{
+      		break;
+    	}
+  	}
 }
 
 function switchMode() {
