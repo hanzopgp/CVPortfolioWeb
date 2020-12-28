@@ -1,3 +1,4 @@
+var canvas;
 var particles = [];
 var attractors = [];
 var repulsors = [];
@@ -18,15 +19,15 @@ var paddingLeft;
 var pointActivated = true;
 
 function setup(){	
-	canvas = createCanvas(displayWidth-20	, displayHeight);
+	
 
 	if(displayWidth > 800){
+		canvas = createCanvas(windowWidth-20	, windowHeight);
 		rangeX = int(windowWidth/5);
 		responsiveFontSize = int(windowWidth/120);
 		responsiveFontSizeAlt = int(windowWidth/300);
 		responsiveOffSetTxt = int(windowWidth/96);
 		responsiveOffSetTxtAlt = int(windowWidth/128);
-		console.log(windowWidth);
 		paddingLeft = int(windowWidth/24);
 		for(var i = 1; i < 6; i++){
 			offsets.push(paddingLeft+responsiveOffSetTxt*i);
@@ -35,12 +36,13 @@ function setup(){
 			offsetsAlt.push(offsets[4]+responsiveOffSetTxtAlt*i);
 		}
 	}else{
+		canvas = createCanvas(displayWidth-20	, displayHeight);
+		nbParticles = 200;
 		rangeX = int(displayWidth/5);
 		responsiveFontSize = int(displayWidth/120);
 		responsiveFontSizeAlt = int(displayWidth/300);
 		responsiveOffSetTxt = int(displayWidth/96);
 		responsiveOffSetTxtAlt = int(displayWidth/128);
-		console.log(displayWidth);
 		paddingLeft = int(displayWidth/24);
 		for(var i = 1; i < 6; i++){
 			offsets.push(paddingLeft+responsiveOffSetTxt*i);
