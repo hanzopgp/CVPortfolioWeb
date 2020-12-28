@@ -18,14 +18,14 @@ var paddingLeft;
 var pointActivated = true;
 
 function setup(){	
-	canvas = createCanvas(windowWidth-20	, windowHeight);
+	canvas = createCanvas(displayWidth-20	, displayHeight);
 
-	rangeX = int(windowWidth/5);
-	responsiveFontSize = int(windowWidth/120);
-	responsiveFontSizeAlt = int(windowWidth/300);
-	responsiveOffSetTxt = int(windowWidth/96);
-	responsiveOffSetTxtAlt = int(windowWidth/128);
-	paddingLeft = int(windowWidth/24);
+	rangeX = int(displayWidth/5);
+	responsiveFontSize = int(displayWidth/120);
+	responsiveFontSizeAlt = int(displayWidth/300);
+	responsiveOffSetTxt = int(displayWidth/96);
+	responsiveOffSetTxtAlt = int(displayWidth/128);
+	paddingLeft = int(displayWidth/24);
 	for(var i = 1; i < 6; i++){
 		offsets.push(paddingLeft+responsiveOffSetTxt*i);
 	}
@@ -40,12 +40,12 @@ function setup(){
 	button.style('border:2px solid #def0de');
 	button.style('color:white');
 
-	//rangeX = windowHeight/2;
+	//rangeX = displayHeight/2;
 	canvas.position(0,0);
 	canvas.style('z-index', '-1');
 	background(0); //lines
 	for(var i = 0; i < nbParticles; i++){
-		particles.push(new Particle(random(rangeX, windowWidth - rangeX), random(rangeY, windowHeight - rangeY)));
+		particles.push(new Particle(random(rangeX, displayWidth - rangeX), random(rangeY, displayHeight - rangeY)));
 	}
 }
 
@@ -86,7 +86,7 @@ function switchMode() {
   }
 
 function windowResized() {
-	resizeCanvas(windowWidth, windowHeight);
+	resizeCanvas(displayWidth, displayHeight);
 }
 
 function drawTxt(){
@@ -112,8 +112,8 @@ function drawTxt(){
 }
 
 function mousePressed(){
-	if(mouseX > rangeX && mouseX < windowWidth - rangeX){
-		if(mouseY > rangeY && mouseY < windowHeight - rangeY){
+	if(mouseX > rangeX && mouseX < displayWidth - rangeX){
+		if(mouseY > rangeY && mouseY < displayHeight - rangeY){
 			if(bool){
 				attractors.push(new Attractor(mouseX,mouseY))
 			}
