@@ -1,7 +1,7 @@
 var particles = [];
 var attractors = [];
 var repulsors = [];
-var nbParticles = 1000;
+var nbParticles = 500;
 var bool = true;
 var tmp = 0;
 var frameCount;
@@ -60,7 +60,7 @@ function draw(){
 			particles[i].attractedBy(attractors[j]);
 		}
 		particles[i].show();
-		if(frameCount >= 300){
+		if(frameCount >= 150){
 			for(var k = 0; k < repulsors.length; k++){
 				particles[i].repulsedBy(repulsors[k]);
 			}
