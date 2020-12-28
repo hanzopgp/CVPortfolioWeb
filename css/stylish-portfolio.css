@@ -211,14 +211,14 @@ h6 {
   width: 50px;
   height: 50px;
   text-align: center;
-  color: #fff;
-  background: rgba(52, 58, 64, 0.5);
+  color: rgb(0, 0, 0);
+  background-color : #def0de;
   line-height: 50px;
   z-index: 999;
 }
 
 .menu-toggle:focus, .menu-toggle:hover {
-  color: #fff;
+  color: rgb(0, 0, 0);
 }
 
 .menu-toggle:hover {

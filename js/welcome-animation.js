@@ -4,7 +4,7 @@ const TMath = THREE.Math;
 
 let conf = {
   color: 0xdef0de,
-  objectWidth: 8,
+  objectWidth: 13,
   objectThickness: 3,
   ambientColor: 0x808080,
   light1Color: 0x59ff88,

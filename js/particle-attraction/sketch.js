@@ -21,7 +21,7 @@ var pointActivated = true;
 function setup(){	
 	if(displayWidth > 800){ //computer
 		canvas = createCanvas(windowWidth-20	, windowHeight);
-		nbParticles = 1500;
+		nbParticles = 500;
 		rangeX = int(windowWidth/5);
 		responsiveFontSize = int(windowWidth/120);
 		responsiveFontSizeAlt = int(windowWidth/300);
@@ -31,12 +31,19 @@ function setup(){
 		for(var i = 1; i < 6; i++){
 			offsets.push(paddingLeft+responsiveOffSetTxt*i);
 		}
-		for(var i = 1; i < 5; i++){
+		for(var i = 1; i < 6; i++){
 			offsetsAlt.push(offsets[4]+responsiveOffSetTxtAlt*i);
 		}
 		for(var i = 0; i < nbParticles; i++){
 			particles.push(new Particle(random(rangeX, windowWidth - rangeX), random(rangeY, windowHeight - rangeY)));
 		}
+		button2 = createButton('Add particles');
+		button2.position(paddingLeft, offsetsAlt[4]+windowWidth/96);
+		button2.mousePressed(addParticle);
+		button2.style('background-color:black');
+		button2.style('border:1px solid #def0de');
+		button2.style('color:white');
+		button2.style('font-size:'+responsiveFontSize+'px');
 	}else{ //phone
 		canvas = createCanvas(displayWidth-20	, displayHeight);
 		nbParticles = 200;
@@ -49,7 +56,7 @@ function setup(){
 		for(var i = 1; i < 6; i++){
 			offsets.push(paddingLeft+responsiveOffSetTxt*i);
 		}
-		for(var i = 1; i < 5; i++){
+		for(var i = 1; i < 6; i++){
 			offsetsAlt.push(offsets[4]+responsiveOffSetTxtAlt*i);
 		}
 		for(var i = 0; i < nbParticles; i++){
@@ -61,7 +68,7 @@ function setup(){
     button.position(paddingLeft, offsetsAlt[3]);
 	button.mousePressed(switchMode);
 	button.style('background-color:black');
-	button.style('border:2px solid #def0de');
+	button.style('border:1px solid #def0de');
 	button.style('color:white');
 	button.style('font-size:'+responsiveFontSize+'px');
 
@@ -77,7 +84,7 @@ function draw(){
 		drawTxt();
 	}
 	
-	for(var i = 0; i < nbParticles; i++){
+	for(var i = 0; i < particles.length; i++){
 		for(var j = 0; j < attractors.length; j++){
 			particles[i].attractedBy(attractors[j]);
 		}
@@ -105,7 +112,15 @@ function switchMode() {
 	}else{
 		pointActivated = true;
 	}
-  }
+}
+
+function addParticle(){
+	if(particles.length <= 2500){
+		for(var i = 0; i < 500; i++){
+			particles.push(new Particle(random(rangeX, windowWidth - rangeX), random(rangeY, windowHeight - rangeY)));
+		}
+	}
+}
 
 function windowResized() {
 	resizeCanvas(displayWidth, displayHeight);
