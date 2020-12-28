@@ -2,7 +2,7 @@ var canvas;
 var particles = [];
 var attractors = [];
 var repulsors = [];
-var nbParticles = 1000;
+var nbParticles;
 var bool = true;
 var tmp = 0;
 var frameCount;
@@ -21,6 +21,7 @@ var pointActivated = true;
 function setup(){	
 	if(displayWidth > 800){ //computer
 		canvas = createCanvas(windowWidth-20	, windowHeight);
+		nbParticles = 1500;
 		rangeX = int(windowWidth/5);
 		responsiveFontSize = int(windowWidth/120);
 		responsiveFontSizeAlt = int(windowWidth/300);
