@@ -9,6 +9,11 @@
   src: url("../fonts/metro.ttf");
  }
 
+ @font-face {
+  font-family: 'Michroma';
+  src: url("../fonts/Michroma.ttf");
+ }
+
 body,
 html {
   width: 100%;
@@ -24,13 +29,14 @@ body {
   font-size: 60px;
   color: #def0de;
   line-height: 70%;
-
 }
 
 .mb-5{
   color : #def0de;
   position : relative;
-  bottom: 10px;
+  bottom: 0px;
+  font-size: 19px;
+  font-family: 'Michroma';
 }
 
 .btn-xl {
@@ -38,11 +44,13 @@ body {
 }
 
 #btn-home {
-  padding : 0.6rem 2gitrem;
+  padding : 0.5rem 1.5rem;
   background-color: #def0de !important;
   color:rgb(0, 0, 0) !important;
   position: relative;
-  bottom : 40px;
+  bottom : 20px;
+  font-size: 13px;
+  font-family: 'Michroma';
 }
 
 .content-section {
@@ -65,7 +73,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 500;
+  font-weight: 250;
 }
 
 .text-faded {
@@ -165,7 +173,10 @@ h6 {
   display: block;
   text-decoration: none;
   color: rgb(0, 0, 0);
-  padding: 15px;
+  padding-left: 15px;
+  padding-top: 30px;
+  font-size: 15px;
+  font-family: 'Michroma';
 }
 
 .sidebar-nav li a:hover {
@@ -180,7 +191,9 @@ h6 {
 }
 
 .sidebar-nav > .sidebar-brand {
-  font-size: 1.2rem;
+  font-family: 'Michroma';
+  font-size: 15px;
+  font-weight: 800;
   background-color: #def0de;
   height: 80px;
   line-height: 50px;
