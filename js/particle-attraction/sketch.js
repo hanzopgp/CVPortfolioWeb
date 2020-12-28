@@ -19,9 +19,7 @@ var paddingLeft;
 var pointActivated = true;
 
 function setup(){	
-	
-
-	if(displayWidth > 800){
+	if(displayWidth > 800){ //computer
 		canvas = createCanvas(windowWidth-20	, windowHeight);
 		rangeX = int(windowWidth/5);
 		responsiveFontSize = int(windowWidth/120);
@@ -35,7 +33,10 @@ function setup(){
 		for(var i = 1; i < 5; i++){
 			offsetsAlt.push(offsets[4]+responsiveOffSetTxtAlt*i);
 		}
-	}else{
+		for(var i = 0; i < nbParticles; i++){
+			particles.push(new Particle(random(rangeX, windowWidth - rangeX), random(rangeY, windowHeight - rangeY)));
+		}
+	}else{ //phone
 		canvas = createCanvas(displayWidth-20	, displayHeight);
 		nbParticles = 200;
 		rangeX = int(displayWidth/5);
@@ -49,6 +50,9 @@ function setup(){
 		}
 		for(var i = 1; i < 5; i++){
 			offsetsAlt.push(offsets[4]+responsiveOffSetTxtAlt*i);
+		}
+		for(var i = 0; i < nbParticles; i++){
+			particles.push(new Particle(random(rangeX, displayWidth - rangeX), random(rangeY, displayHeight - rangeY)));
 		}
 	}
 
@@ -64,9 +68,6 @@ function setup(){
 	canvas.position(0,0);
 	canvas.style('z-index', '-1');
 	background(0); //lines
-	for(var i = 0; i < nbParticles; i++){
-		particles.push(new Particle(random(rangeX, displayWidth - rangeX), random(rangeY, displayHeight - rangeY)));
-	}
 }
 
 function draw(){
