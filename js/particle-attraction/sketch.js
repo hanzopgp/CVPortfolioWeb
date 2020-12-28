@@ -71,7 +71,7 @@ function setup(){
 			button3.style('font-family:Andale Mono');
 		}	
 	}else{ //phone
-		G = 0.1;
+		G = 0.2;
 		canvas = createCanvas(displayWidth, displayHeight);
 		nbParticles = 300;
 		rangeX = int(displayWidth/5);
