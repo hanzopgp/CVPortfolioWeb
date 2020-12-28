@@ -20,8 +20,8 @@ function setup(){
 	canvas = createCanvas(windowWidth-20	, windowHeight);
 	
 	rangeX = int(windowWidth/5);
-	responsiveFontSize = int(windowWidth/128);
-	responsiveFontSizeAlt = int(windowWidth/240);
+	responsiveFontSize = int(windowWidth/150);
+	responsiveFontSizeAlt = int(windowWidth/300);
 	responsiveOffSetTxt = int(windowWidth/96);
 	responsiveOffSetTxtAlt = int(windowWidth/128);
 	paddingLeft = int(windowWidth/24);
