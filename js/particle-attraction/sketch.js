@@ -24,7 +24,7 @@ var G;
 function setup(){	
 	if(displayWidth > 800){ //computer
 		G = 0.5;
-		canvas = createCanvas(windowWidth-20	, windowHeight);
+		canvas = createCanvas(windowWidth-20, windowHeight);
 		nbParticles = 2000;
 		rangeX = int(windowWidth/5);
 		responsiveFontSize = int(windowWidth/120);

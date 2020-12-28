@@ -14,6 +14,11 @@
   src: url("../fonts/Michroma.ttf");
  }
 
+ @font-face {
+  font-family: 'Andale';
+  src: url("../fonts/andalemo.ttf");
+ }
+
 body,
 html {
   width: 100%;
@@ -21,7 +26,8 @@ html {
 }
 
 body {
-  font-family: 'Source Sans Pro';
+  font-family: 'Andale';
+  text-align: justify;
 }
 
 #name-title{
@@ -37,6 +43,13 @@ body {
   bottom: 0px;
   font-size: 1vw;
   font-family: 'Michroma';
+}
+
+.container h2{
+  font-family: 'Metro';
+  font-weight: 300;
+  padding-bottom: 10px;
+  text-decoration: underline;
 }
 
 .btn-xl {
@@ -85,9 +98,14 @@ body {
   color :rgb(0, 0, 0) !important;
 }
 
+.row div {
+  display: inline-block !important;
+}
+
 .content-section {
   padding-top: 7.5rem;
   padding-bottom: 7.5rem;
+  display: block;
 }
 
 .content-section-heading h2 {
