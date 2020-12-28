@@ -202,6 +202,10 @@ function windowResized() {
 	resizeCanvas(windowWidth, windowHeight);
 }
 
+function deviceTurned(){
+	resizeCanvas(windowHeight, windowWidth);
+}
+
 function drawTxt(){
 	push();
 	stroke(0);
