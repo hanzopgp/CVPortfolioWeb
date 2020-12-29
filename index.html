@@ -143,139 +143,163 @@
       </div>
     </section>
 
-    <!-- Skills -->
-    <section class="content-section bg-primary text-white text-center" id="skills">
-      <div class="container">
-        <div class="content-section-heading">
+        <!-- Skill carousel -->
+        <section class="content-section bg-primary text-white text-center" id="skills">
           <h2 class="mb-5">Skills</h2>
-          <br><br>
-        </div>
-        <div class="row">
-          <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
-            <span class="service-icon rounded-circle mx-auto mb-3">
-              <i class="icon-screen-smartphone"></i>
-            </span>
-            <h4>
-              <strong>Software developement</strong>
-            </h4>
-            <p class="text-faded mb-0">Several projects which can be seen on my github using Java, Python, Haskell...</p>
-          </div>
-          <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
-            <span class="service-icon rounded-circle mx-auto mb-3">
-              <i class="icon-pencil"></i>
-            </span>
-            <h4>
-              <strong>Artificial Intelligence</strong>
-            </h4>
-            <p class="text-faded mb-0">Game theory algorithms, genetic algorithms, neural networks...</p>
-          </div>
-          <div class="col-lg-3 col-md-6 mb-5 mb-md-0">
-            <span class="service-icon rounded-circle mx-auto mb-3">
-              <i class="icon-like"></i>
-            </span>
-            <h4>
-              <strong>3D</strong>
-            </h4>
-            <p class="text-faded mb-0">3D modeling or 3D game developement using blender, Unity...</p>
-          </div>
-          <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
-            <span class="service-icon rounded-circle mx-auto mb-3">
-              <i class="icon-screen-smartphone"></i>
-            </span>
-            <h4>
-              <strong>Science skills</strong>
-            </h4>
-            <p class="text-faded mb-0">Mathematics, physics, biology thanks to school and self-teaching</p>
-          </div>
-        </div>
+          <div class="container my-4">
 
-      <br><br><br>
-      
-        <div class="row">
-          <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
-            <span class="service-icon rounded-circle mx-auto mb-3">
-              <i class="icon-screen-smartphone"></i>
-            </span>
-            <h4>
-              <strong>Harware knowledge</strong>
-            </h4>
-            <p class="text-faded mb-0">Electronics, electricity, VHDL language thanks to a year in <b>industrial electrical and computer engineering</b></p>
-          </div>
-          <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
-            <span class="service-icon rounded-circle mx-auto mb-3">
-              <i class="icon-pencil"></i>
-            </span>
-            <h4>
-              <strong>System & Networks</strong>
-            </h4>
-            <p class="text-faded mb-0">System and network knowledge, few projects using Bash/awk languages.</p>
-          </div>
-          <div class="col-lg-3 col-md-6 mb-5 mb-md-0">
-            <span class="service-icon rounded-circle mx-auto mb-3">
-              <i class="icon-like"></i>
-            </span>
-            <h4>
-              <strong>Mobility</strong>
-            </h4>
-            <p class="text-faded mb-0">Driver license and car owner.</p>
-          </div>
-          <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
-            <span class="service-icon rounded-circle mx-auto mb-3">
-              <i class="icon-screen-smartphone"></i>
-            </span>
-            <h4>
-              <strong>Editing software</strong>
-            </h4>
-            <p class="text-faded mb-0">Video editing and music producing due to personal projects</p>
-          </div>
-        </div>
+            <!--Carousel Wrapper-->
+            <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
+        
+              <!--Controls-->
+              <div class="controls-top">
+                <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
+                <a class="btn-floating" href="#multi-item-example" data-slide="next"><i class="fa fa-chevron-right"></i></a>
+              </div>
+              <!--/.Controls-->
+        
+              <!--Indicators-->
+              <ol class="carousel-indicators">
+                <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
+                <li data-target="#multi-item-example" data-slide-to="1"></li>
+                <li data-target="#multi-item-example" data-slide-to="2"></li>
+              </ol>
+              <!--/.Indicators-->
+        
+              <!--Slides-->
+              <div class="carousel-inner" role="listbox">
+        
+                <!--First slide-->
+                <div class="carousel-item active">
+        
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="card mb-2">
+                        <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg"
+                          alt="Card image cap">
+                        <div class="card-body">
+                          <h4 class="card-title">Software developement</h4>
+                          <p class="card-text">Several projects which can be seen on my github using Java, Python, Haskell...</p>
+                        </div>
+                      </div>
+                    </div>
+        
+                    <div class="col-md-4 clearfix d-none d-md-block">
+                      <div class="card mb-2">
+                        <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(47).jpg"
+                          alt="Card image cap">
+                        <div class="card-body">
+                          <h4 class="card-title">Artificial Intelligence</h4>
+                          <p class="card-text">Game theory algorithms, genetic algorithms, neural networks...</p>
+                        </div>
+                      </div>
+                    </div>
+        
+                    <div class="col-md-4 clearfix d-none d-md-block">
+                      <div class="card mb-2">
+                        <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(48).jpg"
+                          alt="Card image cap">
+                        <div class="card-body">
+                          <h4 class="card-title">3D</h4>
+                          <p class="card-text">Game theory algorithms, genetic algorithms, neural networks....</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+        
+                </div>
+                <!--/.First slide-->
+        
+                <!--Second slide-->
+                <div class="carousel-item">
+        
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="card mb-2">
+                        <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Food/4-col/img%20(53).jpg"
+                          alt="Card image cap">
+                        <div class="card-body">
+                          <h4 class="card-title">Science skills</h4>
+                          <p class="card-text">Mathematics, physics, biology thanks to school and self-teaching</p>
+                        </div>
+                      </div>
+                    </div>
+        
+                    <div class="col-md-4 clearfix d-none d-md-block">
+                      <div class="card mb-2">
+                        <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Food/4-col/img%20(45).jpg"
+                          alt="Card image cap">
+                        <div class="card-body">
+                          <h4 class="card-title">Hardware knowledge</h4>
+                          <p class="card-text">Electronics, electricity, VHDL language thanks to a year in industrial electrical and computer engineering</p>
+                        </div>
+                      </div>
+                    </div>
+        
+                    <div class="col-md-4 clearfix d-none d-md-block">
+                      <div class="card mb-2">
+                        <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Food/4-col/img%20(51).jpg"
+                          alt="Card image cap">
+                        <div class="card-body">
+                          <h4 class="card-title">System & Networks</h4>
+                          <p class="card-text">System and network knowledge, few projects using Bash/awk languages.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+        
+                </div>
+                <!--/.Second slide-->
 
-        <br><br><br>
+                <!--Third slide-->
+                <div class="carousel-item">
 
-        <div class="row">
-          <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
-            <span class="service-icon rounded-circle mx-auto mb-3">
-              <i class="icon-screen-smartphone"></i>
-            </span>
-            <h4>
-              <strong>French</strong>
-            </h4>
-            <p class="text-faded mb-0">French is my mothertongue.</b></p>
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="card mb-2">
+                        <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg"
+                          alt="Card image cap">
+                        <div class="card-body">
+                          <h4 class="card-title">...........</h4>
+                          <p class="card-text">........................</p>
+                        </div>
+                      </div>
+                    </div>
+        
+                    <div class="col-md-4 clearfix d-none d-md-block">
+                      <div class="card mb-2">
+                        <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg"
+                          alt="Card image cap">
+                        <div class="card-body">
+                          <h4 class="card-title">Editing software</h4>
+                          <p class="card-text">Video editing and music producing due to personal projects.</p>
+                        </div>
+                      </div>
+                    </div>
+        
+                    <div class="col-md-4 clearfix d-none d-md-block">
+                      <div class="card mb-2">
+                        <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(35).jpg"
+                          alt="Card image cap">
+                        <div class="card-body">
+                          <h4 class="card-title">Languages & driver licence</h4>
+                          <p class="card-text">French is my mothertongue. I also speak fluently english and I learnt spanish in school. I have my driver licence since 2015 and I do own a car.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+        
+                </div>
+                <!--/.Third slide-->
+        
+              </div>
+              <!--/.Slides-->
+        
+            </div>
+            <!--/.Carousel Wrapper-->
+        
           </div>
-          <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
-            <span class="service-icon rounded-circle mx-auto mb-3">
-              <i class="icon-pencil"></i>
-            </span>
-            <h4>
-              <strong>English</strong>
-            </h4>
-            <p class="text-faded mb-0">I speak fluently english.</p>
-          </div>
-          <div class="col-lg-3 col-md-6 mb-5 mb-md-0">
-            <span class="service-icon rounded-circle mx-auto mb-3">
-              <i class="icon-like"></i>
-            </span>
-            <h4>
-              <strong>Spanish</strong>
-            </h4>
-            <p class="text-faded mb-0">I learnt spanish in school and went several times to Spain.</p>
-          </div>
-          <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
-            <span class="service-icon rounded-circle mx-auto mb-3">
-              <i class="icon-screen-smartphone"></i>
-            </span>
-            <h4>
-              <strong>Mobility</strong>
-            </h4>
-            <p class="text-faded mb-0">I have my driver license and a car.</p>
-          </div>
-        </div>
-
-
-      </div>
-
-      
-    </section>
+        </section>
 
     <!-- Experience -->
         <section class="content-section bg-primary text-white text-center" id="experience">

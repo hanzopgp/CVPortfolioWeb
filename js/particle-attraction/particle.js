@@ -9,7 +9,6 @@ function Particle(x,y){
 	this.color3 = random(255);
 
 	this.show = function(){
-		//stroke(this.color1,this.color2,this.color3);
 		stroke('#adeed7');
 		strokeWeight(1);
 		point(this.pos.x,this.pos.y);

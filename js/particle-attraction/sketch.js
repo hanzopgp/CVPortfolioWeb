@@ -23,6 +23,7 @@ var G;
 var maxAttractRepuls;
 var gSlider;
 var sliderVisible;
+var alphaChange;
 
 function setup(){	
 	if(displayWidth > 800){ //computer
@@ -174,8 +175,10 @@ function draw(){
 function switchMode() {
 	if(pointActivated == true){
 		pointActivated = false;
+		alphaChange = false;
 	}else{
 		pointActivated = true;
+		alphaChange = true;
 	}
 }
 
@@ -191,6 +194,7 @@ function resetCanvas(){
 	attractors = [];
 	repulsors = [];
 	particles = [];
+	background(0);
 	for(var i = 0; i < nbParticles; i++){
 		particles.push(new Particle(random(rangeX, windowWidth - rangeX), random(rangeY, windowHeight - rangeY)));
 	}
