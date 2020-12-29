@@ -118,6 +118,15 @@ h2{
   height: 300px;
 }
 
+.phone {
+  display: none;
+}
+
+@media only screen and (max-device-width: 380px) {
+  .phone{display: block;}       
+  .desktop {display: none;}
+} 
+
 .btn-floating{
   font-size : 20px;
   color: #adeed7;
