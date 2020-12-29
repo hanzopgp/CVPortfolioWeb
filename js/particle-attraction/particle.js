@@ -35,8 +35,7 @@ function Particle(x,y){
 		var repulsorPos = createVector(repulsor.pos.x, repulsor.pos.y);
 		var force = p5.Vector.sub(repulsorPos, this.pos);
 		var dsquared = force.magSq();
-		var G2 = 2;
-		var strength = (this.w + repulsor.w)*G2 / dsquared;
+		var strength = (this.w + repulsor.w)*G / dsquared;
 		force.setMag(-strength);
 		this.acc.add(force);
 	}

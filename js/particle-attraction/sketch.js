@@ -21,6 +21,8 @@ var moreInfosActivated = false;
 var frames = [];
 var G;
 var maxAttractRepuls;
+var gSlider;
+var sliderVisible;
 
 function setup(){	
 	if(displayWidth > 800){ //computer
@@ -33,9 +35,9 @@ function setup(){
 		responsiveFontSizeAlt = int(windowWidth/205);
 		responsiveOffSetTxt = int(windowWidth/96);
 		responsiveOffSetTxtAlt = int(windowWidth/128);
-		paddingLeft = int(windowWidth/24);
+		paddingLeft = int(windowWidth/38);
 		for(var i = 1; i < 7; i++){
-			offsets.push(paddingLeft+responsiveOffSetTxt*i);
+			offsets.push(paddingLeft+70+responsiveOffSetTxt*i);
 		}
 		for(var i = 1; i < 8; i++){
 			offsetsAlt.push(offsets[5]+responsiveOffSetTxtAlt*i);
@@ -79,7 +81,12 @@ function setup(){
 			button4.style('border:1px solid #def0de');
 			button4.style('color:#def0de');
 			button4.style('font-size:'+responsiveFontSize-7+'px');
-			button4.style('font-family:Andale Mono');
+            button4.style('font-family:Andale Mono');
+            
+            gSlider = createSlider(0, 5, 0.3, 0.05);
+            gSlider.position(paddingLeft, 80);
+			gSlider.style('visibility: hidden');
+			gSlider.style('border : 1px solid #def0de');
 		}	
 	}else{ //phone
 		G = 0.15;
@@ -136,7 +143,7 @@ function draw(){
 					}
 				}
 			}
-		}
+        }
 	}else{
 		for(var i = 0; i < particles.length; i++){
 			particles[i].show();
@@ -173,7 +180,7 @@ function switchMode() {
 }
 
 function addParticle(){
-	if(particles.length <= 2500){
+	if(particles.length <= 3000){
 		for(var i = 0; i < 500; i++){
 			particles.push(new Particle(random(rangeX, windowWidth - rangeX), random(rangeY, windowHeight - rangeY)));
 		}
@@ -192,8 +199,10 @@ function resetCanvas(){
 function triggerInfos(){
 	if(!moreInfosActivated){
 		moreInfosActivated = true;
+		gSlider.style('visibility: visible');
 	}else{
 		moreInfosActivated = false;
+		gSlider.style('visibility: hidden');
 	}
 }
 
@@ -204,7 +213,11 @@ function showMoreInfos(){
 	strokeWeight(0);
 	fill("#def0de");
 	textSize(responsiveFontSize);
-	textFont("Andale Mono");
+    textFont("Andale Mono");
+	
+    G = gSlider.value();
+	text('Gravitational constant', paddingLeft, 90);
+	gSlider.style('background-color : black');
 
 	textSize(responsiveFontSize);
 	text("* Particles : " + particles.length, paddingLeft, offsets[0]);
