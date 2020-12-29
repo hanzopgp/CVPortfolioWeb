@@ -124,7 +124,7 @@ h2{
 
 @media only screen and (max-device-width: 380px) {
   .phone{display: block;}       
-  .desktop {display: none;}
+  #skills{display: none;}
 } 
 
 .btn-floating{
