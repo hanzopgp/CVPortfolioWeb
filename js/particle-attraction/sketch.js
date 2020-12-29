@@ -20,11 +20,13 @@ var pointActivated = true;
 var moreInfosActivated = false;
 var frames = [];
 var G;
+var maxAttractRepuls;
 
 function setup(){	
 	if(displayWidth > 800){ //computer
-		G = 0.5;
-		canvas = createCanvas(windowWidth-20, windowHeight);
+		G = 0.3;
+		maxAttractRepuls = 12;
+		canvas = createCanvas(windowWidth-20, windowHeight);	
 		nbParticles = 2000;
 		rangeX = int(windowWidth/5);
 		responsiveFontSize = int(windowWidth/120);
@@ -80,7 +82,8 @@ function setup(){
 			button4.style('font-family:Andale Mono');
 		}	
 	}else{ //phone
-		G = 0.2;
+		G = 0.15;
+		maxAttractRepuls = 7;
 		canvas = createCanvas(displayWidth-20, displayHeight);
 		nbParticles = 300;
 		rangeX = int(displayWidth/5);
@@ -206,7 +209,7 @@ function showMoreInfos(){
 	textSize(responsiveFontSize);
 	text("* Particles : " + particles.length, paddingLeft, offsets[0]);
 	textSize(responsiveFontSize);
-	text("* G Force : 0.3", paddingLeft, offsets[1]);
+	text("* G Force : " + G, paddingLeft, offsets[1]);
 
 	textSize(responsiveFontSize);
 	text("* Frames : " + frameCount, paddingLeft, offsets[2]);
@@ -242,13 +245,15 @@ function drawTxt(){
 }
 
 function mousePressed(){
-	if(mouseX > rangeX && mouseX < displayWidth - rangeX){
-		if(mouseY > rangeY && mouseY < displayHeight - rangeY){
-			if(bool){
-				attractors.push(new Attractor(mouseX,mouseY))
-			}
-			else{
-				repulsors.push(new Repulsor(mouseX,mouseY));
+	if(attractors.length + repulsors.length < maxAttractRepuls){
+		if(mouseX > rangeX && mouseX < displayWidth - rangeX){
+			if(mouseY > rangeY && mouseY < displayHeight - rangeY){
+				if(bool){
+					attractors.push(new Attractor(mouseX,mouseY))
+				}
+				else{
+					repulsors.push(new Repulsor(mouseX,mouseY));
+				}
 			}
 		}
 	}
