@@ -263,7 +263,7 @@ h6 {
   transition: all 0.4s ease 0s;
   transform: translateX(250px);
   background: #def0de;
-  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  border-left: 3px solid lightgray;
 }
 
 .sidebar-nav {
@@ -343,7 +343,7 @@ h6 {
 }
 
 .menu-toggle:hover {
-  background: #343a40;
+  background: #85d4be;
 }
 
 .service-icon {
