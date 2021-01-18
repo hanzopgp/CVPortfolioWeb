@@ -171,11 +171,6 @@ function draw(){
 		repulsors[j].show();
 	}
 
-	if(mouseX > rangeX && mouseX < displayWidth - rangeX){
-		if(mouseY > rangeY && mouseY < displayHeight - rangeY){
-			cursor(CROSS);
-		}
-	}
 }
 
 function switchMode() {
