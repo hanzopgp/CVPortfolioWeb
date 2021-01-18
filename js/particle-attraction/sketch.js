@@ -124,7 +124,7 @@ function setup(){
 function draw(){
 	if(pointActivated){
 		background(0);
-		if(displayWidth > 800){
+		if(windowWidth > 800){
 			drawTxt();
 			if(moreInfosActivated){
 				showMoreInfos();

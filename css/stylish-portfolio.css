@@ -51,6 +51,9 @@ body {
   #skills {
     display: none !important;
   }
+  h2{
+    font-size: 33px !important;
+  }
 }
 
 #name-title{
