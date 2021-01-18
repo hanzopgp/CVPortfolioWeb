@@ -160,9 +160,8 @@ h2{
   color :#d9e7b0 !important;
 }
 
-.portfolio-item {
-  text-align: center;
-  padding: 20%;
+.caption-content {
+  padding-top : 20px;
 }
 
 #contact {
