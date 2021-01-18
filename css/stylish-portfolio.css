@@ -161,7 +161,7 @@ h2{
 }
 
 .caption-content {
-  padding-top : 20px;
+  padding-top : 40px;
 }
 
 #contact {
@@ -224,8 +224,8 @@ h6 {
   width: 50px;
   height: 50px;
   text-align: center;
-  color: white;
-  background: rgba(52, 58, 64, 0.5);
+  color: rgb(0, 0, 0);
+  background-color : #def0de;
   line-height: 45px;
 }
 
@@ -234,7 +234,8 @@ h6 {
 }
 
 .scroll-to-top:hover {
-  background: #343a40;
+  background: #85d4be;
+  color :rgb(0, 0, 0);
 }
 
 .scroll-to-top i {
@@ -298,6 +299,19 @@ h6 {
   padding-top: 30px;
   font-size: 15px;
   font-family: 'Michroma';
+}
+
+.fa{
+  color: black;
+  font-size: 30px;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-decoration: none;
+}
+
+.fa:hover{
+  color: white;
+  text-decoration: none;
 }
 
 .sidebar-nav li a:hover {
