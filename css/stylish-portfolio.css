@@ -38,6 +38,12 @@ body {
 #skills {
   display: block !important;
 }
+#skills-phone-menu {
+  display: none !important;
+}
+#skills-computer-menu {
+  display: block !important;
+}
 
 .speicon {
   width: 70px;
@@ -49,6 +55,12 @@ body {
     display: block !important;
   }
   #skills {
+    display: none !important;
+  }
+  #skills-phone-menu {
+    display: block !important;
+  }
+  #skills-computer-menu {
     display: none !important;
   }
   h2{
@@ -311,8 +323,8 @@ h6 {
 .fa{
   color: black;
   font-size: 40px;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 25px;
+  padding-right: 25px;
   text-decoration: none;
 }
 
