@@ -31,6 +31,24 @@ body {
   text-align: justify;
 }
 
+#skills-phone {
+  display: none !important;
+  background-color:rgb(0, 0, 0) !important;
+  color : #adeed7 !important;
+}
+#skills {
+  display: block !important;
+}
+
+@media screen and (max-width: 800px){
+  #skills-phone {
+    display: block !important;
+  }
+  #skills {
+    display: none !important;
+  }
+}
+
 #name-title{
   font-family: 'Metro';
   font-size: 4vw;
@@ -182,10 +200,6 @@ h4,
 h5,
 h6 {
   font-weight: 250;
-}
-
-.text-faded {
-  color: rgba(255, 255, 255, 0.7);
 }
 
 /* Map */
