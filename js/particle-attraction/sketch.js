@@ -170,6 +170,12 @@ function draw(){
 	for(var j = 0; j < repulsors.length; j++){
 		repulsors[j].show();
 	}
+
+	if(mouseX > rangeX && mouseX < displayWidth - rangeX){
+		if(mouseY > rangeY && mouseY < displayHeight - rangeY){
+			cursor(CROSS);
+		}
+	}
 }
 
 function switchMode() {
@@ -183,7 +189,7 @@ function switchMode() {
 }
 
 function addParticle(){
-	if(particles.length <= 3000){
+	if(particles.length <= 3500){
 		for(var i = 0; i < 500; i++){
 			particles.push(new Particle(random(rangeX, windowWidth - rangeX), random(rangeY, windowHeight - rangeY)));
 		}
