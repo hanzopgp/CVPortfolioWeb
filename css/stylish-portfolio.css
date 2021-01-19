@@ -105,6 +105,15 @@ body {
   font-family: 'Michroma';
 }
 
+@media screen and (max-width: 1000px){
+  #name-title{
+    font-size: 6vw;
+  }
+  #under-title {
+    font-size: 1.8vw;
+  }
+}
+
 h2{
   font-family: 'Metro';
   font-weight: 300;
@@ -143,6 +152,12 @@ h2{
   font-size: 13px;
   font-family: 'Michroma';
   border-color: rgb(0, 0, 0) !important;
+}
+
+@media (max-width: 992px) {
+  #btn-lang {
+    height: 25px;
+  }
 }
 
 #btn-lang:hover {
