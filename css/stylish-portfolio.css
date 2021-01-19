@@ -30,6 +30,38 @@ body {
   font-family: 'Andale';
 }
 
+.controls-top a{
+  transform: translateY(225px);
+  z-index: 99;
+}
+ 
+.controls-top .fa{
+  color: #adeed7;
+  padding: 0;
+}
+
+.controls-top .fa-chevron-left{
+  color: #adeed7;
+  transform: translate(-50px);
+}
+
+.controls-top .fa-chevron-right{
+  color: #adeed7;
+  transform: translate(50px);
+}
+
+.controls-top .fa:hover{
+  color: #def0de;
+}
+
+.leftarrow{
+  float:left;
+}
+
+.rightarrow{
+  float:right;
+}
+
 #skills-phone {
   display: none !important;
   background-color:rgb(0, 0, 0) !important;
