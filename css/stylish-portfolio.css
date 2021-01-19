@@ -48,17 +48,23 @@ body {
 #skills-phone img {
   width: 370px;
   height: 370px;
-  padding-bottom: 25px;
+  border : 1px solid #adeed7;
+}
+
+#skills-phone h4{
   padding-right: 10px;
   padding-left: 10px;
+  padding-top: 20px;
+}
+
+#skills-phone .mb-5{
+  padding: 10px;
 }
 
 #skills img {
   width: 370px;
   height: 370px;
-  padding-bottom: 10px;
-  padding-right: 5px;
-  padding-left: 5px;
+  border : 1px solid #adeed7;
 }
 
 .speicon {
@@ -479,6 +485,10 @@ strong {
 
 .portfolio-item{
   padding: 10px;
+}
+
+.portfolio-item img{
+  border : 2px solid #d9e7b0;
 }
 
 #portfolio .caption-content{
