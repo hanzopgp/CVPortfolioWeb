@@ -528,7 +528,8 @@ strong {
 
 .portfolio-item .caption .caption-content p {
   font-weight: 300;
-  font-size: 1.2rem;
+  font-family: 'Andale';
+  font-size: 1.1rem;
 }
 
 @media (min-width: 992px) {
