@@ -156,7 +156,7 @@ h2{
 
 @media (max-width: 992px) {
   #btn-lang {
-    height: 25px;
+    height: 22px;
   }
 }
 
@@ -508,6 +508,12 @@ strong {
 
 #portfolio .caption-content{
   padding-top: 50px;
+}
+
+@media screen and (max-width: 1000px){
+  #portfolio .caption-content{
+    padding-top: 30px;
+  }
 }
 
 .portfolio-item .caption .caption-content {
