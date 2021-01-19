@@ -125,12 +125,7 @@ function draw(){
 	if(pointActivated){
 		background(0);
 		if(windowWidth > 800){
-			if(frameCount < 300 && (frameCount%15==0 || frameCount%16==0 || frameCount%17==0 || frameCount%18==0 || frameCount%19==0)){ //blinking animation for txt
-				background(0);
-			}
-			else{
-				drawTxt();
-			}
+			drawTxt();
 			if(moreInfosActivated){
 				showMoreInfos();
 			}
@@ -260,10 +255,36 @@ function drawTxt(){
 	fill("#def0de");
 	textFont("Andale Mono");
 	textSize(responsiveFontSize);
-	text("-> Click to add a particle", paddingLeft, offsets[5]);
-	text("-> Use 'p' to pause", paddingLeft, offsetsAlt[0]);
-	text("-> Use 'v' to select repulsor", paddingLeft, offsetsAlt[1]);
-	text("-> Use 'b' to select attractor", paddingLeft, offsetsAlt[2]);
+	if(frameCount < 375){
+		if(frameCount > 75 && frameCount < 150){ //lines appearing one by one
+			text("-> Click to add a particle", paddingLeft, offsets[5]);
+			
+		}
+		if(frameCount > 150 && frameCount < 225){
+			text("-> Use 'p' to pause", paddingLeft, offsetsAlt[0]);
+			
+		}
+		if(frameCount > 225 && frameCount < 300){
+			text("-> Use 'v' to select repulsor", paddingLeft, offsetsAlt[1]);
+			
+		}
+		if(frameCount > 300 && frameCount < 375){
+			text("-> Use 'b' to select attractor", paddingLeft, offsetsAlt[2]);
+			
+		}
+	}else{
+		if(frameCount < 500 && frameCount%10 == 0){ //blinking first line
+			text("-> Click to add a particle", paddingLeft, offsets[5]);
+		}else{
+			background(0);
+		}
+		if(frameCount >= 500){
+			text("-> Click to add a particle", paddingLeft, offsets[5]);
+		}
+		text("-> Use 'p' to pause", paddingLeft, offsetsAlt[0]);
+		text("-> Use 'v' to select repulsor", paddingLeft, offsetsAlt[1]);
+		text("-> Use 'b' to select attractor", paddingLeft, offsetsAlt[2]);
+	}
 	pop();
 }
 
