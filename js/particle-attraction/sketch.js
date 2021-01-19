@@ -58,7 +58,7 @@ function setup(){
 			button.style('font-family:Andale Mono');
 
 			button2 = createButton('Add particles');
-			button2.position(paddingLeft, offsetsAlt[4]+windowWidth/65);
+			button2.position(paddingLeft, offsetsAlt[4]+windowWidth/40);
 			button2.mousePressed(addParticle);
 			button2.style('background-color:black');
 			button2.style('border:1px solid #def0de');
@@ -67,7 +67,7 @@ function setup(){
 			button2.style('font-family:Andale Mono');
 
 			button3 = createButton('Display infos');
-			button3.position(paddingLeft, offsetsAlt[5]+2*(windowWidth/65));
+			button3.position(paddingLeft, offsetsAlt[5]+2*(windowWidth/40));
 			button3.mousePressed(triggerInfos);
 			button3.style('background-color:black');
 			button3.style('border:1px solid #def0de');
@@ -76,7 +76,7 @@ function setup(){
 			button3.style('font-family:Andale Mono');
 
 			button4 = createButton('Reset');
-			button4.position(paddingLeft, offsetsAlt[6]+3*(windowWidth/65));
+			button4.position(paddingLeft, offsetsAlt[6]+3*(windowWidth/40));
 			button4.mousePressed(resetCanvas);
 			button4.style('background-color:black');
 			button4.style('border:1px solid #def0de');
@@ -125,7 +125,12 @@ function draw(){
 	if(pointActivated){
 		background(0);
 		if(windowWidth > 800){
-			drawTxt();
+			if(frameCount < 300 && (frameCount%15==0 || frameCount%16==0 || frameCount%17==0 || frameCount%18==0 || frameCount%19==0)){ //blinking animation for txt
+				background(0);
+			}
+			else{
+				drawTxt();
+			}
 			if(moreInfosActivated){
 				showMoreInfos();
 			}
