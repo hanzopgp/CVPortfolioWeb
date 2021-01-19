@@ -530,10 +530,30 @@ strong {
     clip-path: inset(2rem);
   }
   .portfolio-item:hover .caption {
-    background-color:rgb(0, 0, 0);
+    background-color:#d9e7b0;
     -webkit-clip-path: inset(2rem);
     clip-path: inset(2rem);
   }
+
+  .portfolio-item:hover .mb-0 {
+    visibility: visible;
+    font-weight: 800 !important;
+  }
+
+  .portfolio-item:hover .h2 {
+    visibility: visible;
+  }
+
+  .caption-content .h2{
+    color:rgb(0, 0, 0);
+    visibility: hidden;
+  }
+
+  .caption-content .mb-0{
+    color:rgb(0, 0, 0);
+    visibility: hidden;
+  }
+
 }
 
 .map iframe {
