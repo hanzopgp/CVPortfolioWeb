@@ -71,7 +71,13 @@ body {
 }
 
 #informations h2, #skills h2{
-  margin-bottom: 0 !important;
+  margin-bottom: 1rem !important;
+  line-height: 0;
+}
+
+#experience h2{
+  margin-bottom: 1rem !important;
+  line-height: 1.5;
 }
 
 #skills-phone {
@@ -422,7 +428,7 @@ h6 {
 
 .fa{
   color: black;
-  font-size: 40px;
+  font-size: 30px;
   padding-left: 25px;
   padding-right: 25px;
   text-decoration: none;

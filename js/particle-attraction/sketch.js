@@ -289,14 +289,29 @@ function drawTxt(){
 }
 
 function mousePressed(){
-	if(attractors.length + repulsors.length < maxAttractRepuls){
-		if(mouseX > rangeX && mouseX < windowWidth - rangeX){
-			if(mouseY > rangeY && mouseY < windowHeight - rangeY){
-				if(bool){
-					attractors.push(new Attractor(mouseX,mouseY))
+	if(windowWidth > 600){
+		if(attractors.length + repulsors.length < maxAttractRepuls){
+			if(mouseX > rangeX && mouseX < windowWidth - rangeX){
+				if(mouseY > rangeY && mouseY < windowHeight - rangeY){
+					if(bool){
+						attractors.push(new Attractor(mouseX,mouseY))
+					}
+					else{
+						repulsors.push(new Repulsor(mouseX,mouseY));
+					}
 				}
-				else{
-					repulsors.push(new Repulsor(mouseX,mouseY));
+			}
+		}
+	}else{
+		if(attractors.length + repulsors.length < maxAttractRepuls){
+			if(mouseX > rangeX && mouseX < windowWidth - rangeX){
+				if(mouseY > rangeY && mouseY < windowHeight - rangeY - windowHeight/3){
+					if(bool){
+						attractors.push(new Attractor(mouseX,mouseY))
+					}
+					else{
+						repulsors.push(new Repulsor(mouseX,mouseY));
+					}
 				}
 			}
 		}
