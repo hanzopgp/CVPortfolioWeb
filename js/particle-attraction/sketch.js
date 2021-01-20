@@ -290,8 +290,8 @@ function drawTxt(){
 
 function mousePressed(){
 	if(attractors.length + repulsors.length < maxAttractRepuls){
-		if(mouseX > rangeX && mouseX < displayWidth - rangeX){
-			if(mouseY > rangeY && mouseY < displayHeight - rangeY){
+		if(mouseX > rangeX && mouseX < windowWidth - rangeX){
+			if(mouseY > rangeY && mouseY < windowHeight - rangeY){
 				if(bool){
 					attractors.push(new Attractor(mouseX,mouseY))
 				}
