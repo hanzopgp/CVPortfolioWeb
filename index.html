@@ -22,7 +22,7 @@
     {
       setTimeout(function(){
         document.getElementById("content").style.display = "block";
-      }, 1000);
+      }, 1200);
     }
 </script>
 
@@ -44,6 +44,10 @@
   <!-- Add icon library -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+  <!-- Loading screen -->
+  <link rel="stylesheet" type="text/css" href="loading-bar.css"/>
+  <script type="text/javascript" src="loading-bar.js"></script>
+
   <!-- Custom CSS -->
   <link href="css/stylish-portfolio.css" rel="stylesheet">
   <link href="css/welcome-animation.css " rel="stylesheet">
@@ -52,10 +56,13 @@
 
 <body id="page-top" onload="showSite()">
   
-  <!-- Welcome animation -->
-  <canvas id="reveal-effect"></canvas>
+  <!-- Loading screen -->
+  <div class="ldBar" data-value="50"></div>
 
   <div id="content">
+
+    <!-- Welcome animation -->
+    <canvas id="reveal-effect"></canvas>
 
     <!-- Menu -->
     <a class="menu-toggle rounded" href="#">
@@ -151,43 +158,46 @@
         </div>
         <div class="row">
           <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+            <img class="speicon" src="icon/hobbies.png">
             <h4>
               <strong>Hobbies <br>(outside IT)</strong>
             </h4>
             <p class="text-faded mb-0">
               <ul id="hobbies">
-                <li>Neurosciences</li>
                 <li>Physics</li>
                 <li>Mathematics</li>
+                <li>Neurosciences</li>
+                <li>Virtual reality</li>
+                <li>Music clip editing</li>
                 <li>Workout</li>
                 <li>Cinema</li>
-                <li>Music clip editing</li>
               </ul>
             </p>
           </div>
           <div class="col-lg-6 col-md-6 mb-5 mb-lg-0">
-            <h4>
-              <strong>Presentation</strong>
-            </h4>
-            <p class="text-faded mb-0" id="presentation">My name is Enzo and I'm 23 years old. 
-              I'm currently studying computer science (AI oriented) in Caen, France. 
-              After completing my bachelor's degree I would like to do a master's degree in AI, and a PhD after that. 
-              I'm also thinking about a double degree, probably in another science, such as Mathematics, Physic or Biology. 
-              Indeed, I would really like to work in research. My goal is to work somewhere between Neuroscience, Biology, Computer science... 
-              in companies such as Neuralink.</p>
+            <p class="text-faded mb-0" id="presentation">I'm currently studying computer science (AI oriented) in Caen, France.
+              After completing my BSC degree, I would like to do a master's degree in AI, and a PhD.<br>
+              I'm interested in computer science since I started debugging programs or video games. Indeed, I started really early (8 years old).<br>
+              Thanks to books, documentary and conference about AI, I'm convinced this field is the one I want to work in.
+              The main books that influenced me are <a target="_blank" href="https://www.odilejacob.fr/catalogue/sciences/informatique/quand-la-machine-apprend_9782738149312.php">"When the machine learns"</a>, <a target="_blank" href="https://www.lisez.com/livre-grand-format/la-plus-belle-histoire-de-lintelligence/9782221221105">"The Most Beautiful History of Intelligence"</a> wrote by Yann le Cun, 
+              or currently <a target="_blank" href="https://www.oreilly.com/library/view/deep-learning/9781491924570/">"Deep Learning: A Practitioner's Approach"</a> wrote by Josh Patterson & Adam Gibson.<br>
+              Finaly, the man who influenced me the most and made me start studying computer science is Elon Musk. His dedication and hard work are some values I find motivating. I share the vision he is conveying through his conferences and companies.
+              It seems like he puts humanity before his person and I also do. That's one of the reason that makes me want to work in research after completing my studies.
+            </p>
           </div>
           <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+            <img class="speicon" src="icon/influence.png">
             <h4>
-              <strong>Influences</strong>
+              <strong><a target="_blank" href="https://github.com/hanzopgp/computersciencelinks">Influences</a></strong>
             </h4>
             <p class="text-faded mb-0">
               <ul id="influences">
                 <li>Elon Musk</li>
                 <li>Yann Le Cun</li>
                 <li>Etienne Klein</li>
-                <li>Robert C. Martin</li>
-                <li>DeepMind (Chess & Go)</li>
-                <li>OpenAI (Hide&Seek)</li>
+                <li><a target="_blank" href="https://github.com/hanzopgp/cleancodememento">Robert C. Martin</a></li>
+                <li>DeepMind (<a target="_blank" href="https://www.youtube.com/watch?v=2ciR6rA85tg&ab_channel=TwoMinutePapers">Chess</a> & <a target="_blank" href="https://www.youtube.com/watch?v=WXuK6gekU1Y&t=3296s&ab_channel=DeepMind">Go</a>)</li>
+                <li>OpenAI (<a target="_blank" href="https://www.youtube.com/watch?v=Lu56xVlZ40M&ab_channel=TwoMinutePapers">Hide&Seek</a>)</li>
                 <li>Neuralink</li>
               </ul>
             </p>
