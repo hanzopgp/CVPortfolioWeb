@@ -64,6 +64,7 @@ body {
 
 #hobbies, #influences {
   text-align: left;
+  list-style: square;
 }
 
 #presentation{
@@ -299,8 +300,8 @@ h2{
 }
 
 .content-section {
-  padding-top: 7.5rem;
-  padding-bottom: 7.5rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
   display: block;
 }
 
