@@ -30,7 +30,7 @@ function setup(){
 		G = 0.3;
 		maxAttractRepuls = 12;
 		canvas = createCanvas(windowWidth-20, windowHeight);	
-		nbParticles = 2000;
+		nbParticles = 1000;
 		rangeX = int(windowWidth/5);
 		responsiveFontSize = int(windowWidth/120);
 		responsiveFontSizeAlt = int(windowWidth/205);
