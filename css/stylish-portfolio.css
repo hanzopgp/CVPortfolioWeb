@@ -646,6 +646,16 @@ strong {
 
 }
 
+@media (max-width: 992px) {
+  .caption-content .h2{
+    visibility: hidden;
+  }
+
+  .caption-content .mb-0{
+    font-size: 12px;
+  }
+}
+
 .map iframe {
   height: 100%;
   width: 100%;
