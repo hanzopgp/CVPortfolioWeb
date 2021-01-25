@@ -652,7 +652,12 @@ strong {
   }
 
   .caption-content .mb-0{
-    font-size: 12px;
+    -webkit-text-stroke: 0.3px black;
+    -webkit-text-fill-color: white;
+    font-weight: 400;
+    position : absolute;
+    top : 75px;
+    width : 60%;
   }
 }
 
