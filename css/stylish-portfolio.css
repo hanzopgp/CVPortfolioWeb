@@ -112,6 +112,11 @@ body {
   padding: 10px;
 }
 
+#nostyle{
+  text-decoration: none;
+  color :#d9e7b0;
+}
+
 #skills img {
   width: 370px;
   height: 370px;
