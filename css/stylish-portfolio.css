@@ -132,6 +132,10 @@ body {
   display : none;
 }
 
+.experience-down{
+  padding-top: 30px;
+}
+
 @media screen and (max-width: 1000px){
   #display-on-phone{
     display: block !important;
@@ -150,6 +154,9 @@ body {
   }
   h2{
     font-size: 33px !important;
+  }
+  .experience-down{
+    padding-top: 0;
   }
 }
 
