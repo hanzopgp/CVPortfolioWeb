@@ -30,6 +30,11 @@ body {
   font-family: 'Andale';
 }
 
+#informations a{
+  color: #0059ad !important;
+  font-weight: 600;
+}
+
 .controls-top a{
   transform: translateY(225px);
   z-index: 99;
