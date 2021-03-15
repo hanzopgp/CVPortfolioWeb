@@ -35,6 +35,15 @@ body {
   font-weight: 600;
 }
 
+.under-portfolio{
+  color : #def0de;
+  position : relative;
+  bottom: 0px;
+  font-size: 0.7vw;
+  font-family: 'Michroma';
+  transform: translateY(200px);
+}
+
 .controls-top a{
   transform: translateY(225px);
   z-index: 99;
@@ -117,7 +126,7 @@ body {
   padding: 10px;
 }
 
-#nostyle{
+.nostyle{
   text-decoration: none;
   color :#d9e7b0;
 }
@@ -193,6 +202,11 @@ h2{
   font-family: 'Metro';
   font-weight: 300;
   padding-bottom: 10px;
+}
+
+#portfolio h2{
+  padding-bottom: 0px !important;
+  margin-bottom: 0 !important;
 }
 
 .btn-xl {
